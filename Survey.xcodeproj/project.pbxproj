@@ -15,6 +15,7 @@
 		D9CC9D0B1DB927FD00C4C8E2 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D0A1DB927FD00C4C8E2 /* Survey.swift */; };
 		D9CC9D0D1DB92DEE00C4C8E2 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D0C1DB92DEE00C4C8E2 /* SurveyController.swift */; };
 		D9CC9D0F1DB932E700C4C8E2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D0E1DB932E700C4C8E2 /* NetworkController.swift */; };
+		D9CC9D151DB93B6600C4C8E2 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D9CC9D0A1DB927FD00C4C8E2 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		D9CC9D0C1DB92DEE00C4C8E2 /* SurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		D9CC9D0E1DB932E700C4C8E2 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +64,48 @@
 			children = (
 				D9CC9CF81DB925C200C4C8E2 /* AppDelegate.swift */,
 				D9CC9CFA1DB925C200C4C8E2 /* ViewController.swift */,
-				D9CC9CFC1DB925C200C4C8E2 /* Main.storyboard */,
-				D9CC9D0A1DB927FD00C4C8E2 /* Survey.swift */,
-				D9CC9D0E1DB932E700C4C8E2 /* NetworkController.swift */,
-				D9CC9D0C1DB92DEE00C4C8E2 /* SurveyController.swift */,
+				D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */,
+				D9CC9D101DB9384F00C4C8E2 /* Model */,
+				D9CC9D111DB9387500C4C8E2 /* ModelController */,
 				D9CC9CFF1DB925C200C4C8E2 /* Assets.xcassets */,
+				D9CC9D121DB938A300C4C8E2 /* otherController */,
+				D9CC9D131DB938AE00C4C8E2 /* Resources */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		D9CC9D101DB9384F00C4C8E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9CC9D0A1DB927FD00C4C8E2 /* Survey.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D9CC9D111DB9387500C4C8E2 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				D9CC9D0E1DB932E700C4C8E2 /* NetworkController.swift */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		D9CC9D121DB938A300C4C8E2 /* otherController */ = {
+			isa = PBXGroup;
+			children = (
+				D9CC9D0C1DB92DEE00C4C8E2 /* SurveyController.swift */,
+			);
+			name = otherController;
+			sourceTree = "<group>";
+		};
+		D9CC9D131DB938AE00C4C8E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9CC9CFC1DB925C200C4C8E2 /* Main.storyboard */,
 				D9CC9D011DB925C200C4C8E2 /* LaunchScreen.storyboard */,
 				D9CC9D041DB925C200C4C8E2 /* Info.plist */,
 			);
-			path = Survey;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +184,7 @@
 				D9CC9D0B1DB927FD00C4C8E2 /* Survey.swift in Sources */,
 				D9CC9CFB1DB925C200C4C8E2 /* ViewController.swift in Sources */,
 				D9CC9CF91DB925C200C4C8E2 /* AppDelegate.swift in Sources */,
+				D9CC9D151DB93B6600C4C8E2 /* SurveyViewController.swift in Sources */,
 				D9CC9D0D1DB92DEE00C4C8E2 /* SurveyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

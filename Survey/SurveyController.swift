@@ -17,7 +17,7 @@ class SurveyController {
     
     //methods
     
-    static func putSurveyIntoApi(withName name: String, andLanguage: String, language: String) {
+    static func putSurveyIntoApi(withName name: String, andLanguage language: String) {
         
         
         // create an instance
