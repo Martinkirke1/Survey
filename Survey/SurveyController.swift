@@ -10,44 +10,75 @@ import Foundation
 
 class SurveyController {
     
+    //============================
+    //  Mark: - Propreties
+    //============================
     
     static let baseURL = URL(string: "https://survey-api.firebaseio.com/api/survey")
     
-    static let getAllSurverysEndpoint = baseURL?.appendingPathComponent("json")
+    static let getAllSurveysEndpoint = baseURL?.appendingPathExtension("json")
     
-    //methods
+    //============================
+    //  Mark: - Methods
+    //============================
     
-    static func putSurveyIntoApi(withName name: String, andLanguage language: String) {
+    static func putSurveyIntoApi(name: String, language: String) {
         
-        
-        // create an instance
+        // Create an instance
         
         let survey = Survey(name: name, language: language)
         
+        // Unwrap our URL
         
-        //unwrap our url
+        guard let putEndpointURL = survey.Putendpoint else { return }
         
-        guard let Putendpoint = survey.Putendpoint else { return }
+        // Make the PUT request
         
-        //make the put request
-        
-        NetworkController.preformRequest(for: Putendpoint, httpMethod: .Put, body: survey.jsonData ) { (data, error) in
+        NetworkController.preformRequest(for: putEndpointURL, httpMethod: .Put, body: survey.jsonData) { (data, error) in
             
             let responseDataString = String(data: data!, encoding: .utf8) ?? ""
             
             if error != nil {
-                
                 NSLog("Error: \(error?.localizedDescription)")
-                
             } else if responseDataString.contains("error") {
-                
-                NSLog("Error: \(error?.localizedDescription)")
-
+                NSLog("Error: \(responseDataString)")
             } else {
-                
-                NSLog("Successfully saved data to the PUT endpoint.\nResponse: \(responseDataString)")
+                NSLog("Successfully saved data to the PUT endpoint. \nResponse: \(responseDataString)")
             }
         }
     }
+    
+    static func fetchResults(completion: @escaping (_ results: [Survey]) -> Void)   {
+        
+        guard let getAllSurveysEndpointURL = getAllSurveysEndpoint else {
+            completion([])
+            return
+        }
+        
+        NetworkController.preformRequest(for: getAllSurveysEndpointURL, httpMethod: .Get) { (data, error) in
+            
+            let responseDataString = String(data: data!, encoding: .utf8) ?? ""
+            
+            if error != nil {
+                NSLog("Error: \(error?.localizedDescription)")
+                completion([])
+                return
+            } else if responseDataString.contains("error") {
+                NSLog("Error: \(responseDataString)")
+                completion([])
+                return
+            }
+            
+            guard let data = data, let jsonDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: [String: Any]] else {
+                
+                completion([])
+                return
+            }
+            
+            let surveys = jsonDictionary.flatMap{ Survey(identifier: $0.0, dictionary: $0.1) }
+            completion(surveys)
+        }
+        
+    }
+    
 }
-

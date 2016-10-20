@@ -26,7 +26,7 @@ class SurveyViewController: UIViewController {
             let language = languageTExtField.text,
             !name.isEmpty && !language.isEmpty else { return }
      
-        SurveyController.putSurveyIntoApi(withName: name, andLanguage: language)
+        SurveyController.putSurveyIntoApi(name: name, language: language)
         
         nameTextField.text = ""
         languageTExtField.text = ""

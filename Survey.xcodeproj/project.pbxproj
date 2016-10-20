@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D9CC9CF91DB925C200C4C8E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9CF81DB925C200C4C8E2 /* AppDelegate.swift */; };
-		D9CC9CFB1DB925C200C4C8E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9CFA1DB925C200C4C8E2 /* ViewController.swift */; };
 		D9CC9CFE1DB925C200C4C8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CC9CFC1DB925C200C4C8E2 /* Main.storyboard */; };
 		D9CC9D001DB925C200C4C8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CC9CFF1DB925C200C4C8E2 /* Assets.xcassets */; };
 		D9CC9D031DB925C200C4C8E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CC9D011DB925C200C4C8E2 /* LaunchScreen.storyboard */; };
@@ -16,12 +15,12 @@
 		D9CC9D0D1DB92DEE00C4C8E2 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D0C1DB92DEE00C4C8E2 /* SurveyController.swift */; };
 		D9CC9D0F1DB932E700C4C8E2 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D0E1DB932E700C4C8E2 /* NetworkController.swift */; };
 		D9CC9D151DB93B6600C4C8E2 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */; };
+		D9CC9D171DB9410500C4C8E2 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CC9D161DB9410500C4C8E2 /* LanguagesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9CC9CF51DB925C200C4C8E2 /* Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Survey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CC9CF81DB925C200C4C8E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9CC9CFA1DB925C200C4C8E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D9CC9CFD1DB925C200C4C8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9CC9CFF1DB925C200C4C8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9CC9D021DB925C200C4C8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		D9CC9D0C1DB92DEE00C4C8E2 /* SurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		D9CC9D0E1DB932E700C4C8E2 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		D9CC9D161DB9410500C4C8E2 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				D9CC9CF81DB925C200C4C8E2 /* AppDelegate.swift */,
-				D9CC9CFA1DB925C200C4C8E2 /* ViewController.swift */,
-				D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */,
+				D9CC9D181DB9410C00C4C8E2 /* ViewController */,
 				D9CC9D101DB9384F00C4C8E2 /* Model */,
 				D9CC9D111DB9387500C4C8E2 /* ModelController */,
 				D9CC9CFF1DB925C200C4C8E2 /* Assets.xcassets */,
@@ -106,6 +105,15 @@
 				D9CC9D041DB925C200C4C8E2 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D9CC9D181DB9410C00C4C8E2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9CC9D161DB9410500C4C8E2 /* LanguagesTableViewController.swift */,
+				D9CC9D141DB93B6600C4C8E2 /* SurveyViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CC9D171DB9410500C4C8E2 /* LanguagesTableViewController.swift in Sources */,
 				D9CC9D0F1DB932E700C4C8E2 /* NetworkController.swift in Sources */,
 				D9CC9D0B1DB927FD00C4C8E2 /* Survey.swift in Sources */,
-				D9CC9CFB1DB925C200C4C8E2 /* ViewController.swift in Sources */,
 				D9CC9CF91DB925C200C4C8E2 /* AppDelegate.swift in Sources */,
 				D9CC9D151DB93B6600C4C8E2 /* SurveyViewController.swift in Sources */,
 				D9CC9D0D1DB92DEE00C4C8E2 /* SurveyController.swift in Sources */,
